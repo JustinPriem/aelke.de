@@ -32,6 +32,7 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
   ];
 
   for (const selector of requiredSelectors) {
-    assert.ok(css.includes(selector), `erwarte, dass style.css ${selector} definiert`);
+    const pattern = new RegExp(`(^|[\\s,}])${selector.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*[,{]`);
+    assert.ok(pattern.test(css), `erwarte, dass style.css ${selector} definiert`);
   }
 });

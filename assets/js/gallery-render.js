@@ -1,8 +1,9 @@
 import { escapeHtml } from "./escape-html.js";
 
 export function buildPlaceholderTileHTML(item, { linkUrl, label } = {}) {
-  const alt = escapeHtml(item.alt ?? label ?? "Foto folgt");
   const tileLabel = escapeHtml(label ?? "Foto folgt");
+  const altText = item.alt ?? label ?? "Foto folgt";
+  const alt = escapeHtml(`${label ?? "Foto folgt"}: ${altText}`);
   const inner = `<span class="tile-placeholder__grain" aria-hidden="true"></span><span class="tile-placeholder__label">${tileLabel}</span>`;
 
   if (linkUrl) {

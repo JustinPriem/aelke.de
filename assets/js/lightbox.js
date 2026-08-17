@@ -28,6 +28,7 @@ export class Lightbox {
     this.imgEl = imgEl;
     this.captionEl = captionEl;
     this.currentIndex = -1;
+    this.triggerEl = null;
 
     closeEl?.addEventListener("click", () => this.close());
     nextEl?.addEventListener("click", () =>
@@ -45,16 +46,17 @@ export class Lightbox {
     });
   }
 
-  open(index) {
+  open(index, triggerEl) {
+    this.triggerEl = triggerEl ?? null;
     this.show(index);
     this.rootEl.setAttribute("data-open", "true");
     this.rootEl.focus();
   }
 
   show(index) {
-    this.currentIndex = index;
     const item = this.items[index];
     if (!item) return;
+    this.currentIndex = index;
 
     if (item.src) {
       this.imgEl.src = item.src;
@@ -71,5 +73,6 @@ export class Lightbox {
   close() {
     this.rootEl.setAttribute("data-open", "false");
     this.currentIndex = -1;
+    this.triggerEl?.focus();
   }
 }

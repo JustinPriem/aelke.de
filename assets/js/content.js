@@ -67,6 +67,7 @@ export const content = {
   },
   contact: {
     email: "booking@aelke.de", // TODO: durch echte Booking-Adresse ersetzen
+    emailIsPlaceholder: true,
   },
   social: {
     instagram: "https://www.instagram.com/aelke.music/",

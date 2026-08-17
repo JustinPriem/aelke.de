@@ -2,6 +2,14 @@ import { content } from "./content.js";
 import { initNav } from "./nav.js";
 import { escapeHtml } from "./escape-html.js";
 
+function safeCall(fn) {
+  try {
+    fn();
+  } catch (error) {
+    console.error(`Hydration failed: ${fn.name}`, error);
+  }
+}
+
 function hydrateContactLinks() {
   document.querySelectorAll("[data-contact-email]").forEach((el) => {
     el.href = `mailto:${content.contact.email}`;
@@ -37,7 +45,7 @@ function hydrateBioPage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initNav();
-  hydrateContactLinks();
-  hydrateBioPage();
+  safeCall(initNav);
+  safeCall(hydrateContactLinks);
+  safeCall(hydrateBioPage);
 });

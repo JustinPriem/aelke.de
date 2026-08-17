@@ -2,6 +2,14 @@ import { content } from "./content.js";
 import { initSpotifyLazyLoad } from "./spotify-lazy.js";
 import { buildGridHTML } from "./gallery-render.js";
 
+function safeCall(fn) {
+  try {
+    fn();
+  } catch (error) {
+    console.error(`Hydration failed: ${fn.name}`, error);
+  }
+}
+
 function hydrateHero() {
   const claimEl = document.querySelector("[data-band-claim]");
   if (claimEl) claimEl.textContent = content.band.claim;
@@ -41,14 +49,16 @@ function hydrateBioTeaser() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  hydrateHero();
-  hydrateMusicLink();
-  hydrateInstagram();
-  hydrateGalleryTeaser();
-  hydrateBioTeaser();
+  safeCall(hydrateHero);
+  safeCall(hydrateMusicLink);
+  safeCall(hydrateInstagram);
+  safeCall(hydrateGalleryTeaser);
+  safeCall(hydrateBioTeaser);
 
-  const embedContainer = document.querySelector("[data-spotify-embed]");
-  if (embedContainer) {
-    initSpotifyLazyLoad(embedContainer, content.music.spotifyEmbedUrl);
-  }
+  safeCall(function initSpotify() {
+    const embedContainer = document.querySelector("[data-spotify-embed]");
+    if (embedContainer) {
+      initSpotifyLazyLoad(embedContainer, content.music.spotifyEmbedUrl);
+    }
+  });
 });

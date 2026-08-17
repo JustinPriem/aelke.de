@@ -22,6 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const button = event.target.closest("[data-gallery-id]");
     if (!button) return;
     const index = content.gallery.findIndex((item) => item.id === button.dataset.galleryId);
-    if (index !== -1) lightbox.open(index);
+    if (index !== -1) lightbox.open(index, button);
   });
 });
