@@ -28,6 +28,7 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".member-list",
     ".member-card",
     ".lightbox",
+    ".contact-page__email",
   ];
 
   for (const selector of requiredSelectors) {
