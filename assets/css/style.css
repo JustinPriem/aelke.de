@@ -374,6 +374,10 @@ img {
   border-radius: var(--radius-sm);
 }
 
+.lightbox__content img[hidden] {
+  display: none;
+}
+
 .lightbox--placeholder .lightbox__content {
   background: linear-gradient(160deg, var(--color-bg-elevated), #000);
   padding: var(--space-6) var(--space-4);
