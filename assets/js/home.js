@@ -32,7 +32,7 @@ function hydrateInstagram() {
 function hydrateGalleryTeaser() {
   const gridEl = document.querySelector("[data-gallery-teaser-grid]");
   if (!gridEl) return;
-  const teaserItems = content.gallery.slice(0, 3);
+  const teaserItems = content.gallery.slice(0, 4);
   gridEl.innerHTML = buildGridHTML(teaserItems, () => ({ label: "Foto folgt" }));
 }
 

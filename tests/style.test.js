@@ -35,6 +35,7 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".split-section__col",
     ".press-list",
     ".press-card",
+    ".gallery-teaser__cta",
   ];
 
   for (const selector of requiredSelectors) {

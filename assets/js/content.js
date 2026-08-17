@@ -24,11 +24,13 @@ export const content = {
   press: [
     {
       id: "press-1",
-      date: "TODO: Datum ergänzen (z. B. 2026-06-01)",
-      title: "TODO: Titel des Presseberichts",
-      excerpt: "TODO: kurze Zusammenfassung des Artikels.",
-      externalUrl: "https://example.com/TODO-artikel-url", // TODO: echten Link eintragen
-      source: "TODO: Name der Quelle (z. B. Lokalzeitung)",
+      date: "22.07.2026",
+      title: "Nachwuchsband aus Apolda: So fanden sich die Mitglieder von Aelke",
+      excerpt:
+        "Porträt über die Entstehung von ÆLKE aus Apolda: wie sich die Bandmitglieder kennengelernt haben – anlässlich der Debütsingle „Cold Smoke“.",
+      externalUrl:
+        "https://www.thueringer-allgemeine.de/lokales/weimar-und-weimarer-land/article412636053/nachwuchsband-aus-apolda-so-fanden-sich-die-mitglieder-von-aelke.html",
+      source: "Thüringer Allgemeine",
     },
     {
       id: "press-2",

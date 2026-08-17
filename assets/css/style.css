@@ -467,6 +467,12 @@ img {
   min-width: 0;
 }
 
+.gallery-teaser__cta {
+  display: block;
+  width: fit-content;
+  margin: var(--space-2) auto 0;
+}
+
 /* Instagram-Karte */
 .instagram-card {
   display: flex;
