@@ -26,14 +26,6 @@ function hydrateInstagram() {
 
   const profileLinkEl = document.querySelector("[data-instagram-profile-link]");
   if (profileLinkEl) profileLinkEl.href = content.instagram.profileUrl;
-
-  const gridEl = document.querySelector("[data-instagram-grid]");
-  if (gridEl) {
-    gridEl.innerHTML = buildGridHTML(content.instagram.posts, (post) => ({
-      linkUrl: post.postUrl,
-      label: "Instagram",
-    }));
-  }
 }
 
 function hydrateGalleryTeaser() {

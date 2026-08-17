@@ -37,5 +37,4 @@ Vor der öffentlichen Veröffentlichung müssen folgende Platzhalter in
 - `band.claim` – kurzer Bandclaim.
 - `bio.teaser` und `bio.full` – Bandtext.
 - `bio.members` – echte Namen, Instrumente und Steckbriefe der Bandmitglieder.
-- `gallery[].alt` und `instagram.posts[].alt` – echte Bildbeschreibungen für Galerie- und
-  Instagram-Kacheln.
+- `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln.

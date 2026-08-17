@@ -280,6 +280,29 @@ img {
   gap: var(--space-2);
 }
 
+.site-footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text);
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+
+.site-footer__social-link:hover,
+.site-footer__social-link:focus-visible {
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+.site-footer__social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
 .site-footer__copyright {
   width: 100%;
   color: var(--color-text-muted);
@@ -424,6 +447,50 @@ img {
   right: var(--space-2);
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* Instagram-Karte */
+.instagram-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  max-width: 420px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-3);
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+  position: relative;
+  z-index: 1;
+}
+
+.instagram-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  color: var(--color-accent);
+}
+
+.instagram-card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.instagram-card__handle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.instagram-card__hint {
+  margin: 0;
 }
 
 /* Kontakt-Seite */

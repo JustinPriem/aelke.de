@@ -32,38 +32,6 @@ export const content = {
   instagram: {
     handle: "@aelke.music",
     profileUrl: "https://www.instagram.com/aelke.music/",
-    posts: [
-      {
-        id: "insta-1",
-        postUrl: "https://www.instagram.com/aelke.music/p/DZ8BViKl2EZ/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-      {
-        id: "insta-2",
-        postUrl: "https://www.instagram.com/aelke.music/p/DZz7-GSCtOv/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-      {
-        id: "insta-3",
-        postUrl: "https://www.instagram.com/aelke.music/p/DZkgivHFwoD/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-      {
-        id: "insta-4",
-        postUrl: "https://www.instagram.com/aelke.music/p/DZfnVMMF3G1/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-      {
-        id: "insta-5",
-        postUrl: "https://www.instagram.com/aelke.music/p/DZU8PayirAV/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-      {
-        id: "insta-6",
-        postUrl: "https://www.instagram.com/aelke.music/reel/DZLW6cuCsFo/",
-        alt: "TODO: Bildbeschreibung ergänzen",
-      },
-    ],
   },
   contact: {
     email: "booking@aelke.de", // TODO: durch echte Booking-Adresse ersetzen

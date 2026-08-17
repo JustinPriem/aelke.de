@@ -25,12 +25,9 @@ test("gallery hat mindestens 4 Einträge mit id und alt", () => {
   }
 });
 
-test("instagram.posts verlinken auf echte aelke.music-Posts", () => {
-  assert.ok(content.instagram.posts.length >= 4);
-  for (const post of content.instagram.posts) {
-    assert.match(post.postUrl, /^https:\/\/www\.instagram\.com\/aelke\.music\//);
-    assert.equal(typeof post.alt, "string");
-  }
+test("instagram hat handle und profileUrl", () => {
+  assert.match(content.instagram.handle, /^@/);
+  assert.match(content.instagram.profileUrl, /^https:\/\/www\.instagram\.com\/aelke\.music\/?$/);
 });
 
 test("bio.members ist ein Array mit name/role/text pro Eintrag", () => {
