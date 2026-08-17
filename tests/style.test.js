@@ -22,6 +22,9 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".tile-grid",
     ".tile-placeholder",
     ".site-footer",
+    ".hero",
+    ".hero__title",
+    ".music__embed",
   ];
 
   for (const selector of requiredSelectors) {

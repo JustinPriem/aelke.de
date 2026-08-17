@@ -44,8 +44,22 @@
     </header>
 
     <main>
-      <!-- TODO: hero section -->
-      <!-- TODO: music section -->
+      <section id="hero" class="hero grain-overlay">
+        <div class="container hero__inner">
+          <p class="hero__eyebrow">Indie-Rock aus der Region</p>
+          <h1 class="hero__title">ÆLKE</h1>
+          <p class="hero__claim" data-band-claim></p>
+          <a class="btn btn--accent" href="#musik">Musik hören</a>
+        </div>
+      </section>
+      <section id="musik" class="section music">
+        <div class="container">
+          <h2 class="section__heading">Musik</h2>
+          <p>Die Debütsingle <strong>„Cold Smoke“</strong> ist auf allen Streamingdiensten verfügbar.</p>
+          <div class="music__embed" data-spotify-embed></div>
+          <a class="btn" data-stream-all-link href="#" target="_blank" rel="noopener">Überall hören</a>
+        </div>
+      </section>
       <!-- TODO: instagram section -->
       <!-- TODO: bio teaser section -->
       <!-- TODO: gallery teaser section -->
@@ -63,5 +77,6 @@
     </footer>
 
     <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/home.js"></script>
   </body>
 </html>

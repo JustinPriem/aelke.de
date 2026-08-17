@@ -278,3 +278,42 @@ img {
   font-size: 0.85rem;
   margin: 0;
 }
+
+/* Hero */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero__inner {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.hero__title {
+  font-size: clamp(3rem, 12vw, 7rem);
+  margin: var(--space-2) 0;
+}
+
+.hero__claim {
+  max-width: 40ch;
+  font-size: 1.1rem;
+}
+
+/* Musik */
+.music__embed {
+  min-height: 352px;
+  margin: var(--space-3) 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+}
