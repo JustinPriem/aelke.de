@@ -27,6 +27,7 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".music__embed",
     ".member-list",
     ".member-card",
+    ".lightbox",
   ];
 
   for (const selector of requiredSelectors) {

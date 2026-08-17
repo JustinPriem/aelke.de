@@ -347,3 +347,69 @@ img {
   letter-spacing: 0.08em;
   margin: 0 0 var(--space-1);
 }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 100;
+}
+
+.lightbox[data-open="true"] {
+  display: flex;
+}
+
+.lightbox__content {
+  max-width: min(90vw, 700px);
+  text-align: center;
+}
+
+.lightbox__content img {
+  max-height: 70vh;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+}
+
+.lightbox--placeholder .lightbox__content {
+  background: linear-gradient(160deg, var(--color-bg-elevated), #000);
+  padding: var(--space-6) var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.lightbox__caption {
+  margin-top: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.lightbox__close,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background: none;
+  border: 0;
+  color: var(--color-text);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.lightbox__close {
+  top: var(--space-2);
+  right: var(--space-2);
+}
+
+.lightbox__prev {
+  left: var(--space-2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox__next {
+  right: var(--space-2);
+  top: 50%;
+  transform: translateY(-50%);
+}

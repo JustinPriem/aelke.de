@@ -43,7 +43,38 @@
       </div>
     </header>
 
-    <main><!-- TODO: galerie content --></main>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="section__heading">Galerie</h1>
+          <div class="tile-grid" data-full-gallery-grid></div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="lightbox"
+      data-lightbox
+      data-open="false"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Bildansicht"
+      tabindex="-1"
+    >
+      <button type="button" class="lightbox__close" data-lightbox-close aria-label="Schließen">
+        &times;
+      </button>
+      <button type="button" class="lightbox__prev" data-lightbox-prev aria-label="Vorheriges Bild">
+        &larr;
+      </button>
+      <div class="lightbox__content">
+        <img data-lightbox-image alt="" />
+        <p class="lightbox__caption" data-lightbox-caption></p>
+      </div>
+      <button type="button" class="lightbox__next" data-lightbox-next aria-label="Nächstes Bild">
+        &rarr;
+      </button>
+    </div>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
@@ -57,5 +88,6 @@
     </footer>
 
     <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/galerie-page.js"></script>
   </body>
 </html>
