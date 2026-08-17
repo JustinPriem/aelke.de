@@ -511,6 +511,50 @@ img {
   margin: 0;
 }
 
+/* Presse & News */
+.press-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.press-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+}
+
+.press-card__date {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--space-1);
+}
+
+.press-card__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 var(--space-1);
+}
+
+.press-card__excerpt {
+  margin: 0 0 var(--space-1);
+}
+
+.press-card__link {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.press-card__link:hover,
+.press-card__link:focus-visible {
+  color: var(--color-accent-hover);
+}
+
 /* Kontakt-Seite */
 .contact-page__email {
   display: inline-block;

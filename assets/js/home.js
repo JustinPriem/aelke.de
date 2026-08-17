@@ -1,6 +1,7 @@
 import { content } from "./content.js";
 import { initSpotifyLazyLoad } from "./spotify-lazy.js";
 import { buildGridHTML } from "./gallery-render.js";
+import { escapeHtml } from "./escape-html.js";
 
 function safeCall(fn) {
   try {
@@ -40,12 +41,37 @@ function hydrateBioTeaser() {
   if (el) el.textContent = content.bio.teaser;
 }
 
+function hydratePress() {
+  const listEl = document.querySelector("[data-press-list]");
+  if (!listEl) return;
+
+  listEl.innerHTML = content.press
+    .map((entry) => {
+      const linkLabel = entry.source ? `Zum Artikel (${escapeHtml(entry.source)})` : "Zum Artikel";
+      const link = entry.externalUrl
+        ? `<a class="press-card__link" href="${escapeHtml(
+            entry.externalUrl
+          )}" target="_blank" rel="noopener">${linkLabel} →</a>`
+        : "";
+
+      return `
+        <li class="press-card">
+          <p class="press-card__date">${escapeHtml(entry.date)}</p>
+          <h3 class="press-card__title">${escapeHtml(entry.title)}</h3>
+          <p class="press-card__excerpt">${escapeHtml(entry.excerpt)}</p>
+          ${link}
+        </li>`;
+    })
+    .join("");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   safeCall(hydrateHero);
   safeCall(hydrateMusicLink);
   safeCall(hydrateInstagram);
   safeCall(hydrateGalleryTeaser);
   safeCall(hydrateBioTeaser);
+  safeCall(hydratePress);
 
   safeCall(function initSpotify() {
     const embedContainer = document.querySelector("[data-spotify-embed]");

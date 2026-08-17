@@ -14,8 +14,12 @@ Website über einen lokalen Server wie oben aufgerufen werden.
 
 ## Inhalte pflegen
 
-Alle austauschbaren Inhalte (Bandtext, Bandmitglieder, Bildbeschreibungen, Kontakt-E-Mail,
-Social-Links, Spotify-Embed-URL) liegen zentral in [`assets/js/content.js`](assets/js/content.js).
+Alle austauschbaren Inhalte (Bandtext, Bandmitglieder, Bildbeschreibungen, Presse-/News-Einträge,
+Kontakt-E-Mail, Social-Links, Spotify-Embed-URL) liegen zentral in
+[`assets/js/content.js`](assets/js/content.js). Presse-Einträge (`press[]`) können entweder einen
+`externalUrl` (Link zu einem externen Artikel, plus `source` als Quellenangabe) haben oder mit
+`externalUrl: null` als eigener kurzer News-Text ohne externen Link stehen. Neue Einträge kommen an
+den Anfang des Arrays, damit die neuesten zuerst erscheinen.
 Mit `TODO:` markierte Werte sind Platzhalter und sollten vor dem Live-Gang durch echte Inhalte
 ersetzt werden.
 
@@ -38,3 +42,5 @@ Vor der öffentlichen Veröffentlichung müssen folgende Platzhalter in
 - `bio.teaser` und `bio.full` – Bandtext.
 - `bio.members` – echte Namen, Instrumente und Steckbriefe der Bandmitglieder.
 - `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln.
+- `press[]` – die zwei Platzhalter-Einträge durch echte Presseberichte/News ersetzen (oder
+  löschen, falls noch keine vorhanden sind).

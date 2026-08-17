@@ -33,6 +33,8 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".site-footer__social-link",
     ".split-section",
     ".split-section__col",
+    ".press-list",
+    ".press-card",
   ];
 
   for (const selector of requiredSelectors) {

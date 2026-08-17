@@ -21,6 +21,24 @@ export const content = {
       { name: "TODO: Name", role: "TODO: Instrument", text: "TODO: kurzer Steckbrief." },
     ],
   },
+  press: [
+    {
+      id: "press-1",
+      date: "TODO: Datum ergänzen (z. B. 2026-06-01)",
+      title: "TODO: Titel des Presseberichts",
+      excerpt: "TODO: kurze Zusammenfassung des Artikels.",
+      externalUrl: "https://example.com/TODO-artikel-url", // TODO: echten Link eintragen
+      source: "TODO: Name der Quelle (z. B. Lokalzeitung)",
+    },
+    {
+      id: "press-2",
+      date: "TODO: Datum ergänzen (z. B. 2026-05-01)",
+      title: "TODO: Titel der eigenen News",
+      excerpt: "TODO: eigener kurzer News-Text, z. B. über eine neue Single oder einen Gig.",
+      externalUrl: null,
+      source: null,
+    },
+  ],
   gallery: [
     { id: "gallery-1", alt: "TODO: Bildbeschreibung ergänzen" },
     { id: "gallery-2", alt: "TODO: Bildbeschreibung ergänzen" },
