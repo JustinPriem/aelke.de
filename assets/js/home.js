@@ -35,11 +35,17 @@ function hydrateGalleryTeaser() {
   gridEl.innerHTML = buildGridHTML(teaserItems, () => ({ label: "Foto folgt" }));
 }
 
+function hydrateBioTeaser() {
+  const el = document.querySelector("[data-bio-teaser]");
+  if (el) el.textContent = content.bio.teaser;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   hydrateHero();
   hydrateMusicLink();
   hydrateInstagram();
   hydrateGalleryTeaser();
+  hydrateBioTeaser();
 
   const embedContainer = document.querySelector("[data-spotify-embed]");
   if (embedContainer) {
