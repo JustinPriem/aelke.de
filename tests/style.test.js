@@ -31,6 +31,8 @@ test("style.css definiert die Kern-Layout-Klassen", () => {
     ".contact-page__email",
     ".instagram-card",
     ".site-footer__social-link",
+    ".split-section",
+    ".split-section__col",
   ];
 
   for (const selector of requiredSelectors) {

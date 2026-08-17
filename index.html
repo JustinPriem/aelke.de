@@ -60,25 +60,6 @@
           <a class="btn" data-stream-all-link href="#" target="_blank" rel="noopener">Überall hören</a>
         </div>
       </section>
-      <section id="instagram" class="section grain-overlay">
-        <div class="container">
-          <h2 class="section__heading">Instagram</h2>
-          <div class="instagram-card">
-            <span class="instagram-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4.2" />
-                <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none" />
-              </svg>
-            </span>
-            <p class="instagram-card__handle" data-instagram-handle></p>
-            <p class="instagram-card__hint">Fotos, Videos und aktuelle Einblicke von ÆLKE.</p>
-            <a class="btn btn--accent" data-instagram-profile-link href="#" target="_blank" rel="noopener">
-              Auf Instagram ansehen
-            </a>
-          </div>
-        </div>
-      </section>
       <section id="bio-teaser" class="section">
         <div class="container">
           <h2 class="section__heading">Über ÆLKE</h2>
@@ -86,11 +67,32 @@
           <a class="btn" href="biografie.html">Mehr erfahren</a>
         </div>
       </section>
-      <section id="galerie-teaser" class="section">
+      <section id="galerie-teaser" class="section grain-overlay">
         <div class="container">
-          <h2 class="section__heading">Galerie</h2>
-          <div class="tile-grid" data-gallery-teaser-grid></div>
-          <a class="btn" href="galerie.html">Ganze Galerie ansehen</a>
+          <div class="split-section">
+            <div class="split-section__col">
+              <h2 class="section__heading">Galerie</h2>
+              <div class="tile-grid" data-gallery-teaser-grid></div>
+              <a class="btn" href="galerie.html">Ganze Galerie ansehen</a>
+            </div>
+            <div class="split-section__col">
+              <h2 class="section__heading">Instagram</h2>
+              <div class="instagram-card">
+                <span class="instagram-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4.2" />
+                    <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none" />
+                  </svg>
+                </span>
+                <p class="instagram-card__handle" data-instagram-handle></p>
+                <p class="instagram-card__hint">Fotos, Videos und aktuelle Einblicke von ÆLKE.</p>
+                <a class="btn btn--accent" data-instagram-profile-link href="#" target="_blank" rel="noopener">
+                  Auf Instagram ansehen
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

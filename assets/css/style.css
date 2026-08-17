@@ -449,6 +449,24 @@ img {
   transform: translateY(-50%);
 }
 
+/* Galerie/Instagram Zwei-Spalten-Layout */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 720.02px) {
+  .split-section {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.split-section__col {
+  min-width: 0;
+}
+
 /* Instagram-Karte */
 .instagram-card {
   display: flex;
