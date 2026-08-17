@@ -1,0 +1,10 @@
+{
+  "name": "aelke-de",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Website für die Band ÆLKE",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}
