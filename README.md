@@ -35,12 +35,13 @@ HTML-Escaping) ist mit Node.js' eingebautem Test-Runner abgedeckt:
 Vor der öffentlichen Veröffentlichung müssen folgende Platzhalter in
 [`assets/js/content.js`](assets/js/content.js) durch echte Inhalte ersetzt werden:
 
-- `contact.email` (`booking@aelke.de`) – aktuell eine Platzhalter-Adresse
-  (`contact.emailIsPlaceholder: true`), muss durch die echte Booking-Adresse der Band ersetzt
-  werden.
 - `band.claim` – kurzer Bandclaim.
 - `bio.teaser` und `bio.full` – Bandtext.
-- `bio.members` – echte Namen, Instrumente und Steckbriefe der Bandmitglieder.
+- `bio.members[].text` – kurze Steckbriefe der Bandmitglieder (Namen und Instrumente sind bereits
+  hinterlegt).
 - `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln.
 - `press[]` – die zwei Platzhalter-Einträge durch echte Presseberichte/News ersetzen (oder
   löschen, falls noch keine vorhanden sind).
+
+`contact.email` (`aelkeband@gmail.com`) sowie das Logo (`assets/img/logo/`, `assets/img/favicon.svg`)
+sind bereits durch echte Inhalte ersetzt.
