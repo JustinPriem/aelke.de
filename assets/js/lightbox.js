@@ -59,14 +59,20 @@ export class Lightbox {
     this.currentIndex = index;
 
     if (item.src) {
-      this.imgEl.src = item.src;
-      this.imgEl.alt = item.alt;
+      // Datei könnte fehlen (Konvention statt Build-Check) – bei Fehler auf Platzhalter zurückfallen.
+      this.rootEl.classList.remove("lightbox--placeholder");
       this.imgEl.hidden = false;
+      this.imgEl.onerror = () => {
+        this.imgEl.hidden = true;
+        this.rootEl.classList.add("lightbox--placeholder");
+      };
+      this.imgEl.alt = item.alt;
+      this.imgEl.src = item.src;
     } else {
       this.imgEl.hidden = true;
+      this.rootEl.classList.add("lightbox--placeholder");
     }
 
-    this.rootEl.classList.toggle("lightbox--placeholder", !item.src);
     this.captionEl.textContent = item.alt;
   }
 

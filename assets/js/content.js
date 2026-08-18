@@ -16,9 +16,24 @@ export const content = {
     full:
       "TODO: ersetzen – ausführlicher Bandtext über Entstehung, Sound und Ziele von ÆLKE.",
     members: [
-      { name: "Elisa Bruchmann", role: "Bass, Gitarre, Gesang", text: "TODO: kurzer Steckbrief." },
-      { name: "Niklas Pinkert", role: "Schlagzeug", text: "TODO: kurzer Steckbrief." },
-      { name: "Pascal Müller", role: "Gitarre, Gesang", text: "TODO: kurzer Steckbrief." },
+      {
+        name: "Elisa Bruchmann",
+        role: "Bass, Gitarre, Gesang",
+        text: "TODO: kurzer Steckbrief.",
+        photo: "assets/img/members/elisa-bruchmann.jpg",
+      },
+      {
+        name: "Niklas Pinkert",
+        role: "Schlagzeug",
+        text: "TODO: kurzer Steckbrief.",
+        photo: "assets/img/members/niklas-pinkert.jpg",
+      },
+      {
+        name: "Pascal Müller",
+        role: "Gitarre, Gesang",
+        text: "TODO: kurzer Steckbrief.",
+        photo: "assets/img/members/pascal-mueller.jpg",
+      },
     ],
   },
   press: [
@@ -41,13 +56,16 @@ export const content = {
       source: null,
     },
   ],
+  // Foto zu einem Eintrag ergänzen: Datei als <id>.jpg (z. B. gallery-1.jpg) in
+  // assets/img/gallery/ ablegen (siehe assets/img/gallery/README.md) – src verweist bereits
+  // per Konvention darauf, fehlende Dateien fallen automatisch auf den Platzhalter zurück.
   gallery: [
-    { id: "gallery-1", alt: "TODO: Bildbeschreibung ergänzen" },
-    { id: "gallery-2", alt: "TODO: Bildbeschreibung ergänzen" },
-    { id: "gallery-3", alt: "TODO: Bildbeschreibung ergänzen" },
-    { id: "gallery-4", alt: "TODO: Bildbeschreibung ergänzen" },
-    { id: "gallery-5", alt: "TODO: Bildbeschreibung ergänzen" },
-    { id: "gallery-6", alt: "TODO: Bildbeschreibung ergänzen" },
+    { id: "gallery-1", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-1.jpg" },
+    { id: "gallery-2", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-2.jpg" },
+    { id: "gallery-3", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-3.jpg" },
+    { id: "gallery-4", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-4.jpg" },
+    { id: "gallery-5", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-5.jpg" },
+    { id: "gallery-6", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-6.jpg" },
   ],
   instagram: {
     handle: "@aelke.music",

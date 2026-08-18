@@ -4,7 +4,12 @@ export function buildPlaceholderTileHTML(item, { linkUrl, label } = {}) {
   const tileLabel = escapeHtml(label ?? "Foto folgt");
   const altText = item.alt ?? label ?? "Foto folgt";
   const alt = escapeHtml(`${label ?? "Foto folgt"}: ${altText}`);
-  const inner = `<span class="tile-placeholder__grain" aria-hidden="true"></span><span class="tile-placeholder__label">${tileLabel}</span>`;
+  // Konvention: Fotos liegen unter assets/img/gallery/<id>.jpg (siehe assets/img/gallery/README.md).
+  // Fehlt die Datei, entfernt sich das <img> selbst und der Platzhalter bleibt sichtbar.
+  const photo = `<img class="tile-placeholder__photo" src="assets/img/gallery/${escapeHtml(
+    item.id
+  )}.jpg" alt="${alt}" loading="lazy" onerror="this.remove()" />`;
+  const inner = `${photo}<span class="tile-placeholder__grain" aria-hidden="true"></span><span class="tile-placeholder__label">${tileLabel}</span>`;
 
   if (linkUrl) {
     return `<a class="tile-placeholder" href="${escapeHtml(
