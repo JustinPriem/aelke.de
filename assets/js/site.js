@@ -1,6 +1,7 @@
 import { content } from "./content.js";
 import { initNav } from "./nav.js";
 import { escapeHtml } from "./escape-html.js";
+import { assetUrl } from "./asset-path.js";
 
 function safeCall(fn) {
   try {
@@ -34,9 +35,9 @@ function hydrateBioPage() {
     listEl.innerHTML = content.bio.members
       .map((member) => {
         const photo = member.photo
-          ? `<img class="member-card__photo" src="${escapeHtml(member.photo)}" alt="${escapeHtml(
-              member.name
-            )}" loading="lazy" />`
+          ? `<img class="member-card__photo" src="${escapeHtml(
+              assetUrl(member.photo)
+            )}" alt="${escapeHtml(member.name)}" loading="lazy" />`
           : "";
         return `
         <li class="member-card">

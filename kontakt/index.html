@@ -3,27 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galerie – ÆLKE</title>
+    <title>Kontakt – ÆLKE</title>
     <meta
       name="description"
-      content="Fotos und Eindrücke von ÆLKE – Konzerte, Proben und mehr."
+      content="Kontaktiert ÆLKE für Booking-Anfragen und Presse."
     />
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/tokens.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
-        <a class="site-logo" href="index.html">
-          <img class="site-logo__icon" src="assets/img/logo/mascot-white.png" alt="" aria-hidden="true" />
-          <img class="site-logo__wordmark" src="assets/img/logo/wordmark-white.png" alt="ÆLKE" />
+        <a class="site-logo" href="../">
+          <img class="site-logo__icon" src="../assets/img/logo/mascot-white.png" alt="" aria-hidden="true" />
+          <img class="site-logo__wordmark" src="../assets/img/logo/wordmark-white.png" alt="ÆLKE" />
         </a>
         <button
           class="nav-toggle"
@@ -38,10 +38,10 @@
           <span class="nav-toggle__bar"></span>
         </button>
         <nav id="primary-nav" class="site-nav" data-nav-menu data-open="false">
-          <a href="index.html" data-nav-link="home">Start</a>
-          <a href="galerie.html" data-nav-link="galerie">Galerie</a>
-          <a href="biografie.html" data-nav-link="biografie">Biografie</a>
-          <a href="kontakt.html" data-nav-link="kontakt">Kontakt</a>
+          <a href="../" data-nav-link="home">Start</a>
+          <a href="../galerie/" data-nav-link="galerie">Galerie</a>
+          <a href="../biografie/" data-nav-link="biografie">Biografie</a>
+          <a href="../kontakt/" data-nav-link="kontakt">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -49,35 +49,29 @@
     <main>
       <section class="section">
         <div class="container">
-          <h1 class="section__heading">Galerie</h1>
-          <div class="tile-grid" data-full-gallery-grid></div>
+          <h1 class="section__heading">Kontakt</h1>
+          <p>Für Booking-Anfragen und Presse:</p>
+          <a class="contact-page__email" data-contact-email href="mailto:aelkeband@gmail.com">aelkeband@gmail.com</a>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" data-social-instagram href="#" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a class="site-footer__social-link" data-social-spotify href="#" target="_blank" rel="noopener" aria-label="Spotify">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="9.5" />
+                <path d="M7 9.8c3.2-1 6.8-.6 9.6 1" />
+                <path d="M7.6 12.8c2.7-.8 5.7-.5 8 .8" />
+                <path d="M8.2 15.6c2.1-.6 4.4-.4 6.2.6" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
     </main>
-
-    <div
-      class="lightbox"
-      data-lightbox
-      data-open="false"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Bildansicht"
-      tabindex="-1"
-    >
-      <button type="button" class="lightbox__close" data-lightbox-close aria-label="Schließen">
-        &times;
-      </button>
-      <button type="button" class="lightbox__prev" data-lightbox-prev aria-label="Vorheriges Bild">
-        &larr;
-      </button>
-      <div class="lightbox__content">
-        <img data-lightbox-image alt="" />
-        <p class="lightbox__caption" data-lightbox-caption></p>
-      </div>
-      <button type="button" class="lightbox__next" data-lightbox-next aria-label="Nächstes Bild">
-        &rarr;
-      </button>
-    </div>
 
     <footer class="site-footer">
       <div class="container site-footer__inner">
@@ -103,7 +97,6 @@
       </div>
     </footer>
 
-    <script type="module" src="assets/js/site.js"></script>
-    <script type="module" src="assets/js/galerie-page.js"></script>
+    <script type="module" src="../assets/js/site.js"></script>
   </body>
 </html>
