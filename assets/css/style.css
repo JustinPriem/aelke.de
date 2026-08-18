@@ -190,6 +190,14 @@ img {
   margin-bottom: var(--space-3);
 }
 
+/* Angelehnt an den handgezeichneten Schriftzug im ÆLKE-Logo (kein 1:1-Match, siehe
+   assets/img/logo/wordmark-white.png – das Original ist Handlettering, keine Font-Datei). */
+.section__heading--wordmark {
+  font-family: "Josefin Slab", var(--font-display);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
@@ -493,12 +501,14 @@ img {
 @media (min-width: 720.02px) {
   .split-section {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: stretch;
   }
 }
 
 .split-section__col {
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-teaser__cta {
@@ -510,10 +520,13 @@ img {
 /* Instagram-Karte */
 .instagram-card {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
   max-width: 420px;
+  width: 100%;
   margin: 0 auto;
   padding: var(--space-5) var(--space-3);
   text-align: center;

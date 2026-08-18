@@ -12,7 +12,9 @@ export const content = {
   },
   bio: {
     teaser:
-      "TODO: ersetzen – kurzer Absatz über ÆLKE: wie die Band entstanden ist und wofür sie steht.",
+      "TODO: ersetzen – kurzer Absatz über ÆLKE: wie die Band entstanden ist und wofür sie steht. " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt " +
+      "ut labore et dolore magna aliqua.",
     full:
       "TODO: ersetzen – ausführlicher Bandtext über Entstehung, Sound und Ziele von ÆLKE.",
     members: [
@@ -46,14 +48,6 @@ export const content = {
       externalUrl:
         "https://www.thueringer-allgemeine.de/lokales/weimar-und-weimarer-land/article412636053/nachwuchsband-aus-apolda-so-fanden-sich-die-mitglieder-von-aelke.html",
       source: "Thüringer Allgemeine",
-    },
-    {
-      id: "press-2",
-      date: "TODO: Datum ergänzen (z. B. 2026-05-01)",
-      title: "TODO: Titel der eigenen News",
-      excerpt: "TODO: eigener kurzer News-Text, z. B. über eine neue Single oder einen Gig.",
-      externalUrl: null,
-      source: null,
     },
   ],
   // Foto zu einem Eintrag ergänzen: Datei als <id>.jpg (z. B. gallery-1.jpg) in
