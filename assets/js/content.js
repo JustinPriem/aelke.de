@@ -16,9 +16,9 @@ export const content = {
     full:
       "TODO: ersetzen – ausführlicher Bandtext über Entstehung, Sound und Ziele von ÆLKE.",
     members: [
-      { name: "TODO: Name", role: "TODO: Instrument", text: "TODO: kurzer Steckbrief." },
-      { name: "TODO: Name", role: "TODO: Instrument", text: "TODO: kurzer Steckbrief." },
-      { name: "TODO: Name", role: "TODO: Instrument", text: "TODO: kurzer Steckbrief." },
+      { name: "Elisa Bruchmann", role: "Bass, Gitarre, Gesang", text: "TODO: kurzer Steckbrief." },
+      { name: "Niklas Pinkert", role: "Schlagzeug", text: "TODO: kurzer Steckbrief." },
+      { name: "Pascal Müller", role: "Gitarre, Gesang", text: "TODO: kurzer Steckbrief." },
     ],
   },
   press: [
@@ -54,8 +54,8 @@ export const content = {
     profileUrl: "https://www.instagram.com/aelke.music/",
   },
   contact: {
-    email: "booking@aelke.de", // TODO: durch echte Booking-Adresse ersetzen
-    emailIsPlaceholder: true,
+    email: "aelkeband@gmail.com",
+    emailIsPlaceholder: false,
   },
   social: {
     instagram: "https://www.instagram.com/aelke.music/",
