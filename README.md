@@ -46,10 +46,11 @@ Vor der öffentlichen Veröffentlichung müssen folgende Platzhalter in
 - `bio.teaser` und `bio.full` – Bandtext.
 - `bio.members[].text` – kurze Steckbriefe der Bandmitglieder (Namen, Instrumente und Fotos sind
   bereits hinterlegt).
-- `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln, sobald die passenden Fotos
-  in `assets/img/gallery/` liegen (siehe oben).
 - `press[]` – die zwei Platzhalter-Einträge durch echte Presseberichte/News ersetzen (oder
   löschen, falls noch keine vorhanden sind).
+
+Die Galerie (`gallery[]`) ist mit 17 echten Fotos und Bildbeschreibungen befüllt. Weitere Fotos
+können jederzeit wie oben beschrieben ergänzt werden.
 
 `contact.email` (`aelkeband@gmail.com`) sowie das Logo (`assets/img/logo/`, `assets/img/favicon.svg`)
 sind bereits durch echte Inhalte ersetzt. `band.claim` wird aktuell nirgends angezeigt (Hero zeigt

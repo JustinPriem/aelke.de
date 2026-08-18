@@ -60,12 +60,91 @@ export const content = {
   // assets/img/gallery/ ablegen (siehe assets/img/gallery/README.md) – src verweist bereits
   // per Konvention darauf, fehlende Dateien fallen automatisch auf den Platzhalter zurück.
   gallery: [
-    { id: "gallery-1", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-1.jpg" },
-    { id: "gallery-2", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-2.jpg" },
-    { id: "gallery-3", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-3.jpg" },
-    { id: "gallery-4", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-4.jpg" },
-    { id: "gallery-5", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-5.jpg" },
-    { id: "gallery-6", alt: "TODO: Bildbeschreibung ergänzen", src: "assets/img/gallery/gallery-6.jpg" },
+    {
+      id: "gallery-1",
+      alt: "Elisa mit E-Gitarre im Grünen, Sonnenbrille, Blick zur Seite",
+      src: "assets/img/gallery/gallery-1.jpg",
+    },
+    {
+      id: "gallery-2",
+      alt: "Pascal lachend am Mikro neben Niklas mit Drumstick",
+      src: "assets/img/gallery/gallery-2.jpg",
+    },
+    {
+      id: "gallery-3",
+      alt: "Pascal spielt Gitarre auf einer Freiluftbühne, Publikum im Hintergrund",
+      src: "assets/img/gallery/gallery-3.jpg",
+    },
+    {
+      id: "gallery-4",
+      alt: "Pascal singt vor der Bühnenbanner mit dem ÆLKE-Logo",
+      src: "assets/img/gallery/gallery-4.jpg",
+    },
+    {
+      id: "gallery-5",
+      alt: "Pascal und Elisa gemeinsam auf der Bühne beim Gramont City Festival",
+      src: "assets/img/gallery/gallery-5.jpg",
+    },
+    {
+      id: "gallery-6",
+      alt: "Niklas am Schlagzeug beim Gramont City Festival",
+      src: "assets/img/gallery/gallery-6.jpg",
+    },
+    {
+      id: "gallery-7",
+      alt: "Pascal spielt Gitarre vor dunklem Bühnenvorhang",
+      src: "assets/img/gallery/gallery-7.jpg",
+    },
+    {
+      id: "gallery-8",
+      alt: "Elisa im Leo-Print-Kleid an der E-Gitarre, Bühnenbanner im Hintergrund",
+      src: "assets/img/gallery/gallery-8.jpg",
+    },
+    {
+      id: "gallery-9",
+      alt: "Niklas lächelt hinter den Becken seines Schlagzeugs",
+      src: "assets/img/gallery/gallery-9.jpg",
+    },
+    {
+      id: "gallery-10",
+      alt: "Pascal an der Gitarre im roten Bühnenlicht",
+      src: "assets/img/gallery/gallery-10.jpg",
+    },
+    {
+      id: "gallery-11",
+      alt: "Niklas am Schlagzeug auf einer Open-Air-Bühne bei Abendlicht",
+      src: "assets/img/gallery/gallery-11.jpg",
+    },
+    {
+      id: "gallery-12",
+      alt: "Elisa singt und spielt Bass im violetten Bühnenlicht",
+      src: "assets/img/gallery/gallery-12.jpg",
+    },
+    {
+      id: "gallery-13",
+      alt: "Niklas am Schlagzeug unter einem großen Bühnendach, Elisa im Hintergrund",
+      src: "assets/img/gallery/gallery-13.jpg",
+    },
+    {
+      id: "gallery-14",
+      alt: "Pascal singt auf dem Zwiebelmarkt vor der Lángos-Bude bei Regen",
+      src: "assets/img/gallery/gallery-14.jpg",
+    },
+    {
+      id: "gallery-15",
+      alt: "Elisa und Niklas beim Fasching in Apolda, grün-rotes Bühnenlicht",
+      src: "assets/img/gallery/gallery-15.jpg",
+    },
+    {
+      id: "gallery-16",
+      alt: "Pascal singt beim Fasching in Apolda, blaues Bühnenlicht",
+      src: "assets/img/gallery/gallery-16.jpg",
+    },
+    {
+      id: "gallery-17",
+      alt: "Pascal am Mikro, Elisa mit Gitarre im Hintergrund, warmes Abendlicht",
+      src: "assets/img/gallery/gallery-17.jpg",
+    },
   ],
   instagram: {
     handle: "@aelke.music",
