@@ -11,11 +11,6 @@ function safeCall(fn) {
   }
 }
 
-function hydrateHero() {
-  const claimEl = document.querySelector("[data-band-claim]");
-  if (claimEl) claimEl.textContent = content.band.claim;
-}
-
 function hydrateMusicLink() {
   const streamAllEl = document.querySelector("[data-stream-all-link]");
   if (streamAllEl) streamAllEl.href = content.music.streamAllUrl;
@@ -66,7 +61,6 @@ function hydratePress() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  safeCall(hydrateHero);
   safeCall(hydrateMusicLink);
   safeCall(hydrateInstagram);
   safeCall(hydrateGalleryTeaser);

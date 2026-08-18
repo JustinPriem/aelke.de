@@ -23,6 +23,14 @@ den Anfang des Arrays, damit die neuesten zuerst erscheinen.
 Mit `TODO:` markierte Werte sind Platzhalter und sollten vor dem Live-Gang durch echte Inhalte
 ersetzt werden.
 
+### Galerie-Fotos
+
+Echte Fotos kommen nicht in `content.js`, sondern als Dateien nach
+[`assets/img/gallery/`](assets/img/gallery/) – Namenskonvention und Details stehen in der
+[README dort](assets/img/gallery/README.md). Kurzfassung: Datei nach `id` benennen (z. B.
+`gallery-1.jpg` für den Eintrag mit `id: "gallery-1"`) reinziehen, fertig – kein Code-Änderung
+nötig. Fehlt eine Datei, zeigt die Seite automatisch weiter den Platzhalter.
+
 ## Tests
 
 Die testbare Logik (Content-Struktur, Navigation, Lightbox, Grid-Rendering, Spotify-Lazy-Load,
@@ -35,13 +43,15 @@ HTML-Escaping) ist mit Node.js' eingebautem Test-Runner abgedeckt:
 Vor der öffentlichen Veröffentlichung müssen folgende Platzhalter in
 [`assets/js/content.js`](assets/js/content.js) durch echte Inhalte ersetzt werden:
 
-- `band.claim` – kurzer Bandclaim.
 - `bio.teaser` und `bio.full` – Bandtext.
-- `bio.members[].text` – kurze Steckbriefe der Bandmitglieder (Namen und Instrumente sind bereits
-  hinterlegt).
-- `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln.
+- `bio.members[].text` – kurze Steckbriefe der Bandmitglieder (Namen, Instrumente und Fotos sind
+  bereits hinterlegt).
+- `gallery[].alt` – echte Bildbeschreibungen für die Galerie-Kacheln, sobald die passenden Fotos
+  in `assets/img/gallery/` liegen (siehe oben).
 - `press[]` – die zwei Platzhalter-Einträge durch echte Presseberichte/News ersetzen (oder
   löschen, falls noch keine vorhanden sind).
 
 `contact.email` (`aelkeband@gmail.com`) sowie das Logo (`assets/img/logo/`, `assets/img/favicon.svg`)
-sind bereits durch echte Inhalte ersetzt.
+sind bereits durch echte Inhalte ersetzt. `band.claim` wird aktuell nirgends angezeigt (Hero zeigt
+nur noch das Logo) – kann bei Bedarf für einen späteren Einsatzzweck gepflegt werden, ist aber kein
+Blocker fürs Live-Gehen.

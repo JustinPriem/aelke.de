@@ -32,14 +32,22 @@ function hydrateBioPage() {
   const listEl = document.querySelector("[data-member-list]");
   if (listEl) {
     listEl.innerHTML = content.bio.members
-      .map(
-        (member) => `
+      .map((member) => {
+        const photo = member.photo
+          ? `<img class="member-card__photo" src="${escapeHtml(member.photo)}" alt="${escapeHtml(
+              member.name
+            )}" loading="lazy" />`
+          : "";
+        return `
         <li class="member-card">
-          <p class="member-card__role">${escapeHtml(member.role)}</p>
-          <p class="member-card__name">${escapeHtml(member.name)}</p>
-          <p>${escapeHtml(member.text)}</p>
-        </li>`
-      )
+          ${photo}
+          <div class="member-card__body">
+            <p class="member-card__role">${escapeHtml(member.role)}</p>
+            <p class="member-card__name">${escapeHtml(member.name)}</p>
+            <p>${escapeHtml(member.text)}</p>
+          </div>
+        </li>`;
+      })
       .join("");
   }
 }
