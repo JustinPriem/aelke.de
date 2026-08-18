@@ -101,13 +101,15 @@ img {
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  letter-spacing: 0.04em;
 }
 
 .site-logo__icon {
   height: 1.9rem;
+  width: auto;
+}
+
+.site-logo__wordmark {
+  height: 1.3rem;
   width: auto;
 }
 
@@ -347,11 +349,6 @@ img {
   width: min(85vw, 360px);
   height: auto;
   display: block;
-}
-
-.hero__claim {
-  max-width: 40ch;
-  font-size: 1.1rem;
 }
 
 /* Musik */
