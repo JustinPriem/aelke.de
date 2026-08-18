@@ -1,3 +1,5 @@
+import { assetUrl } from "./asset-path.js";
+
 export function computeNextIndex(current, length) {
   if (length <= 0) return -1;
   return (current + 1) % length;
@@ -67,7 +69,7 @@ export class Lightbox {
         this.rootEl.classList.add("lightbox--placeholder");
       };
       this.imgEl.alt = item.alt;
-      this.imgEl.src = item.src;
+      this.imgEl.src = assetUrl(item.src);
     } else {
       this.imgEl.hidden = true;
       this.rootEl.classList.add("lightbox--placeholder");

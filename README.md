@@ -12,6 +12,19 @@ Die Seiten verwenden `type="module"`-Scripts, die von den meisten Browsern per C
 blockiert werden, wenn eine `.html`-Datei direkt über `file://` geöffnet wird. Deshalb muss die
 Website über einen lokalen Server wie oben aufgerufen werden.
 
+### Seitenstruktur & URLs
+
+Die Unterseiten liegen jeweils als `index.html` in einem eigenen Ordner (`galerie/`,
+`biografie/`, `kontakt/`), damit die URLs ohne `.html`-Endung auskommen (z. B. `/galerie/` statt
+`/galerie.html`) – das funktioniert auf jedem statischen Hoster ohne Server-Konfiguration, weil
+Webserver Verzeichnisanfragen standardmäßig mit der `index.html` darin beantworten. Neue
+Unterseiten nach demselben Muster anlegen: Ordner mit `index.html`, alle Asset-Pfade beginnen dort
+mit `../` (z. B. `../assets/css/style.css`). Von `content.js` referenzierte Bildpfade (Galerie,
+Bandmitglieder) werden zur Laufzeit über [`assets/js/asset-path.js`](assets/js/asset-path.js) in
+eine absolute URL aufgelöst, damit sie unabhängig von der Verschachtelungstiefe der aufrufenden
+Seite funktionieren – dort muss bei neuen Asset-Referenzen aus `content.js` nichts angepasst
+werden.
+
 ## Inhalte pflegen
 
 Alle austauschbaren Inhalte (Bandtext, Bandmitglieder, Bildbeschreibungen, Presse-/News-Einträge,

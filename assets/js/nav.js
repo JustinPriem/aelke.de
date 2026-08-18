@@ -1,16 +1,18 @@
+// Erkennt sowohl klassische Dateipfade (/galerie.html) als auch die sprechenden
+// Verzeichnis-URLs ohne .html (/galerie bzw. /galerie/), die galerie/index.html usw. liefern.
 const PAGE_TO_NAV_ID = {
-  "/": "home",
-  "/index.html": "home",
-  "/biografie.html": "biografie",
-  "/galerie.html": "galerie",
-  "/kontakt.html": "kontakt",
+  index: "home",
+  biografie: "biografie",
+  galerie: "galerie",
+  kontakt: "kontakt",
 };
 
 export function getActiveNavId(pathname) {
   const normalized = pathname.split("?")[0].split("#")[0];
-  const fileName = normalized.substring(normalized.lastIndexOf("/") + 1);
-  const key = fileName === "" ? "/" : `/${fileName}`;
-  return PAGE_TO_NAV_ID[key] ?? null;
+  const segments = normalized.split("/").filter(Boolean);
+  if (segments.length === 0) return "home";
+  const last = segments[segments.length - 1].replace(/\.html$/, "");
+  return PAGE_TO_NAV_ID[last] ?? null;
 }
 
 export function initNav() {

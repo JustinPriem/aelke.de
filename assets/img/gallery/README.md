@@ -1,6 +1,6 @@
 # Galerie-Fotos
 
-Hier landen die echten Fotos für die Galerie (Start-Teaser + `galerie.html`).
+Hier landen die echten Fotos für die Galerie (Start-Teaser + `galerie/index.html`).
 
 ## So fügt ihr ein Foto hinzu
 
